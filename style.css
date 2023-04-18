@@ -19,8 +19,9 @@ body {
     left: 50%;
     background-color: #FFF;
     width: 550px;
+    min-width: 370px;
     padding: 50px 10px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .container-title {
@@ -91,4 +92,39 @@ input {
     margin-top: 5px;
 }
 
-/*650px*/
+@media screen and (max-width: 650px) {
+    .container {
+        width: 80%;
+    }
+
+    .container-body {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section {
+        width: 250px;
+    }
+
+    .icon {
+        transform: rotate(90deg);
+    }
+
+    @keyframes spin-rgb {
+        from {
+            transform: rotate(90deg) translateX(0) ;
+        }
+        to {
+            transform: rotate(-90deg) translateX(2px);
+        }
+    }
+    
+    @keyframes spin-hex {
+        from {
+            transform: rotate(90deg) translateX(0) ;
+        }
+        to {
+            transform: rotate(270deg) translateX(2px);
+        }
+    }
+}
