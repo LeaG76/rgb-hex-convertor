@@ -7,15 +7,14 @@ window.addEventListener('load', () => {
     hexInput.value = "";
 });
 
-
 // If element is valid (good rgb or hex format) => normal color
 function valid(element) {
-    element.style.color = "#202040";
+    element.style.color = "#000";
 }
 
 // If element is invalid (bad rgb or hex format) => red color
 function invalid(element, otherElement) {
-    element.style.color = "#f04624";
+    element.style.color = "#ff0000";
     otherElement.value = 0;
 }
 
