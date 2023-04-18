@@ -1,5 +1,6 @@
 let rgbInput = document.getElementById("rgb");
 let hexInput = document.getElementById("hex");
+let icon = document.getElementById("icon");
 
 window.addEventListener('load', () => {
     rgbInput.value = "";
@@ -28,8 +29,12 @@ function toRgb() {
         for(let i=0; i< hexCode.length; i+=2) {
             rgbArr.push(parseInt(hexCode[i] + hexCode[i+1], 16));
         }
+        icon.classList.add("icon-animation-rgb");
         rgbInput.value = "rgb(" + rgbArr + ")";
         document.body.style.backgroundColor = "rgb(" + rgbArr + ")";
+        setTimeout(() => {
+            icon.classList.remove("icon-animation-rgb");
+        }, "1000");
     } else {
         invalid(hexInput, rgbInput);
     }
@@ -52,8 +57,12 @@ function toHex() {
                 value = parseInt(value).toString(16);
                 hex += value.lenght == 1? "0"+value : value;
             });
+            icon.classList.add("icon-animation-hex");
             hexInput.value = hex;
             document.body.style.backgroundColor = hex;
+            setTimeout(() => {
+                icon.classList.remove("icon-animation-hex");
+            }, "1000");
         } else {
             invalid(rgbInput, hexInput);
         }
