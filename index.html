@@ -7,17 +7,30 @@
     <title>RGB/HEX Convertor</title>
     <script src="https://kit.fontawesome.com/cb81440751.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="links.css">
 </head>
 <body>
     <div class="container">
         <div class="section">
             <label for="rgb">Code RGB</label>
-            <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="Enter RBG Value">
+            <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="rgb(...,...,...)">
         </div>
         <i class="fa-solid fa-arrow-right-arrow-left"></i>
         <div class="section">
             <label for="hex">Code Hex</label>
-            <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="Enter HEX Value">
+            <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="#......">
+        </div>
+    </div>
+    <div class="links">
+        <div class="github-link">
+            <a href="https://github.com/LeaG76/rgb-hex-convertor">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="codepen-link">
+            <a href="">
+                <i class="fa-brands fa-codepen"></i>
+            </a>
         </div>
     </div>
     <script src="script.js"></script>
