@@ -20,8 +20,9 @@ function invalid(element, otherElement) {
 
 function toRgb() {
     let hexCode = hexInput.value;
+    let hexRegex = /^#?[A-Fa-f0-9]{6}$/;
     let rgbArr = [];
-    if(/^#?[A-Fa-f0-9]{6}$/.test(hexCode)) {
+    if(hexRegex.test(hexCode)) {
         valid(hexInput);
         hexCode = hexCode.split("#")[1] || hexCode;
         for(let i=0; i< hexCode.length; i+=2) {
@@ -31,5 +32,32 @@ function toRgb() {
         document.body.style.backgroundColor = "rgb(" + rgbArr + ")";
     } else {
         invalid(hexInput, rgbInput);
+    }
+}
+
+function toHex() {
+    let rgbCode = rgbInput.value;
+    let rgbRegex1 = /^rgb\([0-9]{1,3},[0-9]{1,3},[0-9]{1,3}\)$/;
+    let rgbRegex2 = /^[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}$/;
+    let hex = "#";
+    if(rgbRegex1.test(rgbCode) || rgbRegex2.test(rgbCode)) {
+        rgbCode = rgbCode.replace(/[rgb()]+/g,"") || rgbCode;
+        rgbCode = rgbCode.split(",");
+        let condition = rgbCode.every((value) => {
+            return parseInt(value) <= 255;
+        });
+        if(condition) {
+            valid(rgbInput);
+            rgbCode.forEach(value => {
+                value = parseInt(value).toString(16);
+                hex += value.lenght == 1? "0"+value : value;
+            });
+            hexInput.value = hex;
+            document.body.style.backgroundColor = hex;
+        } else {
+            invalid(rgbInput, hexInput);
+        }
+    } else {
+        invalid(rgbInput, hexInput);
     }
 }
