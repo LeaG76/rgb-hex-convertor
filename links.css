@@ -20,9 +20,14 @@
     border-radius: 50%;
 }
 
-.github-link i,
-.codepen-link i {
+.github-link a,
+.codepen-link a {
     color: #000;
     font-size: 25px;
     font-weight: normal;
+}
+
+.github-link a:hover,
+.codepen-link a:hover {
+    color: #333333;
 }
