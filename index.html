@@ -11,14 +11,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="section">
-            <label for="rgb">Code RGB</label>
-            <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="rgb(...,...,...)">
-        </div>
-        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-        <div class="section">
-            <label for="hex">Code Hex</label>
-            <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="#......">
+        <div class="container-title">RGB/HEX Convertor</div>
+        <div class="container-body">
+            <div class="section">
+                <label for="rgb">Code RGB</label>
+                <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="rgb()">
+            </div>
+            <div class="icon" id="icon">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+            <div class="section">
+                <label for="hex">Code Hex</label>
+                <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="#">
+            </div>
         </div>
     </div>
     <div class="links">
