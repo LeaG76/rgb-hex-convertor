@@ -1,6 +1,10 @@
 let rgbInput = document.getElementById("rgb");
 let hexInput = document.getElementById("hex");
 let icon = document.getElementById("icon");
+let rgbClipboard = document.getElementById("clipboard-button-rgb");
+let hexClipboard = document.getElementById("clipboard-button-hex");
+let rgbTooltip = document.getElementById("tooltip-rgb");
+let hexTooltip = document.getElementById("tooltip-hex");
 
 window.addEventListener('load', () => {
     rgbInput.value = "";
@@ -69,3 +73,25 @@ function toHex() {
         invalid(rgbInput, hexInput);
     }
 }
+
+rgbClipboard.addEventListener("click", function() {
+  rgbInput.select();
+  rgbInput.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(rgbInput.value);
+  rgbTooltip.innerHTML = "Copied: " + rgbInput.value;
+});
+
+hexClipboard.addEventListener("click", function() {
+    hexInput.select();
+    hexInput.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(hexInput.value);
+    hexTooltip.innerHTML = "Copied: " + hexInput.value;
+  });
+
+rgbClipboard.addEventListener("mouseout", function() {
+    rgbTooltip.innerHTML = "Copy to clipboard";
+});
+
+hexClipboard.addEventListener("mouseout", function() {
+    hexTooltip.innerHTML = "Copy to clipboard";
+});

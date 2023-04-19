@@ -48,7 +48,48 @@ body {
     align-items: center;
 }
 
-.icon {
+.clipboard-tooltip {
+    position: absolute;
+    bottom: 36%;
+    width: 170px;
+    margin-left: -75px;
+    padding: 5px;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#tooltip-rgb {
+    left: 38.25%;
+}
+
+#tooltip-hex {
+    left: 92.75%;
+}
+
+.clipboard-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333333 transparent transparent transparent;
+}
+
+.icon-clipboard:hover .clipboard-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon,
+.icon-clipboard {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,8 +108,9 @@ body {
 
 @keyframes spin-rgb {
     from {
-        transform: rotate(0deg) translateY(0) ;
+        transform: rotate(0deg) translateY(0);
     }
+
     to {
         transform: rotate(-180deg) translateY(2px);
     }
@@ -76,8 +118,9 @@ body {
 
 @keyframes spin-hex {
     from {
-        transform: rotate(0deg) translateY(0) ;
+        transform: rotate(0deg) translateY(0);
     }
+
     to {
         transform: rotate(180deg) translateY(2px);
     }
@@ -118,17 +161,19 @@ input {
 
     @keyframes spin-rgb {
         from {
-            transform: rotate(90deg) translateX(0) ;
+            transform: rotate(90deg) translateX(0);
         }
+
         to {
             transform: rotate(-90deg) translateX(2px);
         }
     }
-    
+
     @keyframes spin-hex {
         from {
-            transform: rotate(90deg) translateX(0) ;
+            transform: rotate(90deg) translateX(0);
         }
+
         to {
             transform: rotate(270deg) translateX(2px);
         }

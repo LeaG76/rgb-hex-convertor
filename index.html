@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/stylesheets/style.css">
     <link rel="stylesheet" href="assets/stylesheets/links.css">
 </head>
+
 <body>
     <div class="container">
         <div class="container-title">RGB/HEX Convertor</div>
@@ -17,7 +19,10 @@
                 <label for="rgb">Code RGB</label>
                 <div class="section-result">
                     <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="rgb()">
-                    <div class="icon" id="clipboard-button-rgb"><i class="fa-regular fa-clipboard"></i></div>
+                    <div class="icon-clipboard" id="clipboard-button-rgb">
+                        <span class="clipboard-tooltip" id="tooltip-rgb">Copy to clipboard</span>
+                        <i class="fa-regular fa-clipboard"></i>
+                    </div>
                 </div>
             </div>
             <div class="icon" id="icon">
@@ -27,7 +32,10 @@
                 <label for="hex">Code Hex</label>
                 <div class="section-result">
                     <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="#">
-                    <div class="icon" id="clipboard-button-hex"><i class="fa-regular fa-clipboard"></i></div>
+                    <div class="icon-clipboard" id="clipboard-button-hex">
+                        <span class="clipboard-tooltip" id="tooltip-hex">Copy to clipboard</span>
+                        <i class="fa-regular fa-clipboard"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,4 +54,5 @@
     </div>
     <script src="assets/javascripts/script.js"></script>
 </body>
+
 </html>
