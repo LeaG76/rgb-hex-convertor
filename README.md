@@ -34,3 +34,9 @@
 ## Demo
 
 Live demo here: [live demo](https://leag76.github.io/rgb-hex-convertor/ "Go to the live demo")
+
+## Todo
+
+- Fix erreur avec les 0
+- Si espaces les enlever
+- Mettre un span qui lors du click va copier la valeur dans le presse papier
