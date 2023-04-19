@@ -39,7 +39,13 @@ body {
 }
 
 .section {
-    width: 200px;
+    width: 210px;
+}
+
+.section-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon {
@@ -106,7 +112,7 @@ input {
         width: 250px;
     }
 
-    .icon {
+    #icon {
         transform: rotate(90deg);
     }
 

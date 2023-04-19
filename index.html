@@ -15,14 +15,20 @@
         <div class="container-body">
             <div class="section">
                 <label for="rgb">Code RGB</label>
-                <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="rgb()">
+                <div class="section-result">
+                    <input type="text" id="rgb" name="rbg" oninput="toHex()" placeholder="rgb()">
+                    <div class="icon" id="clipboard-button-rgb"><i class="fa-regular fa-clipboard"></i></div>
+                </div>
             </div>
             <div class="icon" id="icon">
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
             <div class="section">
                 <label for="hex">Code Hex</label>
-                <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="#">
+                <div class="section-result">
+                    <input type="text" id="hex" name="hex" oninput="toRgb()" placeholder="#">
+                    <div class="icon" id="clipboard-button-hex"><i class="fa-regular fa-clipboard"></i></div>
+                </div>
             </div>
         </div>
     </div>
