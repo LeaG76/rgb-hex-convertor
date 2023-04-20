@@ -77,6 +77,7 @@ function toHex() {
 rgbClipboard.addEventListener("click", function() {
   rgbInput.select();
   rgbInput.setSelectionRange(0, 99999);
+  rgbInput.value = rgbInput.value.includes("rgb") ? rgbInput.value : "rgb(" + rgbInput.value + ")";
   navigator.clipboard.writeText(rgbInput.value);
   rgbTooltip.innerHTML = "Copied: " + rgbInput.value;
 });
@@ -84,6 +85,7 @@ rgbClipboard.addEventListener("click", function() {
 hexClipboard.addEventListener("click", function() {
     hexInput.select();
     hexInput.setSelectionRange(0, 99999);
+    hexInput.value = hexInput.value.includes("#") ? hexInput.value : "#" + hexInput.value;
     navigator.clipboard.writeText(hexInput.value);
     hexTooltip.innerHTML = "Copied: " + hexInput.value;
   });
