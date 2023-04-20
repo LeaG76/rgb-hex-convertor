@@ -155,6 +155,19 @@ input {
         width: 250px;
     }
 
+    #tooltip-rgb {
+        bottom: 57%;
+    }
+
+    #tooltip-hex {
+        bottom: 24%;
+    }
+
+    #tooltip-rgb,
+    #tooltip-hex {
+        left: 74.5%;
+    }    
+
     #icon {
         transform: rotate(90deg);
     }
