@@ -7,8 +7,8 @@ let rgbTooltip = document.getElementById("tooltip-rgb");
 let hexTooltip = document.getElementById("tooltip-hex");
 
 window.addEventListener('load', () => {
-    rgbInput.value = "";
-    hexInput.value = "";
+    rgbInput.value = "rgb()";
+    hexInput.value = "#";
 });
 
 // If element is valid (good rgb or hex format) => normal color
