@@ -38,5 +38,4 @@ Live demo here: [live demo](https://leag76.github.io/rgb-hex-convertor/ "Go to t
 ## Todo
 
 - Fix erreur avec les 0
-- Si espaces les enlever
 - fix span clipboard lors d'un écran de taille téléphone
