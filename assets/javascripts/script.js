@@ -23,8 +23,7 @@ function invalid(element, otherElement) {
 }
 
 function removeWhitespace(value) {
-    value = value.replace(/\s/g, '')
-    return value;
+    return value.replace(/\s/g, '');
 }
 
 function toRgb() {
