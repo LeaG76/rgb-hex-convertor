@@ -31,9 +31,15 @@
 
 > <sub>The project was created by inspiring me from ...</sub>
 
-## Demo
+### Demo
 
 Live demo here: [live demo](https://leag76.github.io/rgb-hex-convertor/ "Go to the live demo")
+
+## Previews
+
+<p align="center">
+  <img alt="Preview" src="assets/pictures/preview.png" title="Preview" />
+</p>
 
 ## Todo
 
